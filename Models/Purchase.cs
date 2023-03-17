@@ -9,9 +9,6 @@ namespace MasterDetails.Models
         [Required]
         public long PurchaseId { get; set; }
         public DateTime PurchaseDate { get; set; }= DateTime.Now;
-
-
-        
         [Column(TypeName = "nvarchar(50)")]
         [StringLength(8, ErrorMessage = "Supplier Name length can't be more than 50")]
         public string SupplierName { get; set; } = "";

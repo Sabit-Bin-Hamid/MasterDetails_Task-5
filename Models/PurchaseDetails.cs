@@ -11,17 +11,10 @@ namespace MasterDetails.Models
         [Column(TypeName = "nvarchar(50)")]
         [StringLength(50, ErrorMessage = "Item Code can't be more than 500")]
         public string ItemCode { get; set; } = "";
-
-        
         public float ItemQty { get; set; }
-
-        
         public float ItemUnitId { get; set; }
-
-        
+        [Required]
         public float ItemRate { get; set; }
-
-        
         [Required(ErrorMessage = "Required")]
         public int PurchaseId { get; set;}
 
