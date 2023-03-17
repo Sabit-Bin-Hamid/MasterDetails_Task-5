@@ -7,17 +7,18 @@ namespace MasterDetails.Models
     public class PurchaseDetails
     {
 
-        [Required(ErrorMessage = "Required")]
+       
         [Column(TypeName = "nvarchar(50)")]
+        [StringLength(50, ErrorMessage = "Item Code can't be more than 500")]
         public string ItemCode { get; set; } = "";
 
-        [Required(ErrorMessage = "Required")]
+        
         public float ItemQty { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        
         public float ItemUnitId { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        
         public float ItemRate { get; set; }
 
         
