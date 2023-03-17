@@ -8,8 +8,6 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-   
-       
         <div class="panel-group">
             <div class="panel panel-success">
                 <div class="panel-heading">
@@ -186,11 +184,11 @@
 
 }
 
-
 @section Scripts{
     @{
+        //_ValidationScriptsPartial
         await Html.RenderPartialAsync(partialViewName: "_ValidationScriptsPartial");
     }
-
+    // link of Js code
     <script src="~/js/projectscript/purchases/purchasedetailscreate.js"></script>
 }
