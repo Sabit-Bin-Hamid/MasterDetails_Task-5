@@ -32,6 +32,7 @@ namespace MasterDetails.Controllers
                     var isPurchased=_db.SaveChanges() > 0;
                     if(isPurchased)
                     {
+                        
                         // Clear the input box by creating a new, empty object
                         purchase = new Purchase();
                         return RedirectToAction("Create");

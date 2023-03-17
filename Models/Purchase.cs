@@ -27,7 +27,7 @@ namespace MasterDetails.Models
 
         public DateTime EntryDate { get; set; }= DateTime.Now;
 
-        [StringLength(8, ErrorMessage = "Remark  can't be more than 50")]
+        [StringLength(8, ErrorMessage = "Remark  can't be more than 800")]
         [Column(TypeName = "nvarchar(800)")]
         public string Remark { get; set; } = "";
 
