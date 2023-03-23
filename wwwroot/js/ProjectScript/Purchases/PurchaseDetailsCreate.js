@@ -1,5 +1,8 @@
 
 
+
+
+
 $(document).ready(function () {
 
 });
@@ -13,6 +16,7 @@ function CreateRowForPurchase() {
     var selectedItem = getselectedItem();
     //get existing row number
     var index = $("#purchaseDetailsTable").children("tr").length;
+    var action = $("Action");
     //sl for Ui serial number
     var sl = index;
     //for Mvc Array index set
@@ -26,9 +30,10 @@ function CreateRowForPurchase() {
     var ItemUnitIdNoCell = "<td> <input type='hidden' id='ItemUnitIdNo" + index + "' name='PurchaseDetails[" + index + "].ItemUnitId' value='" + selectedItem.ItemUnitIdNo + "' />" + selectedItem.ItemUnitIdNo + "</td>";
     var ItemRateNoCell = "<td> <input type='hidden' id='ItemRateNo" + index + "' name='PurchaseDetails[" + index + "].ItemRate' value='" + selectedItem.ItemRateNo + "' />" + selectedItem.ItemRateNo + "</td>";
 
-
+    //<button type='button' class='btn btn - danger'>Remove</button> 
     //create the Row
-    var createNewRow = "<tr>" + indexCell + serialCell + PurchaseIdNoCell + ItemCodeForCell + ItemQuantityCell + ItemUnitIdNoCell + ItemRateNoCell + "</tr>";
+    var createNewRow = "<tr>" + indexCell + serialCell + PurchaseIdNoCell + ItemCodeForCell + ItemQuantityCell + ItemUnitIdNoCell + ItemRateNoCell  +"</tr>";
+
 
     var allProductsFieldAreFillUp = AllFieldAreGiven();
 
@@ -75,6 +80,8 @@ function getselectedItem() {
 }
 
 
+
+
 function AllFieldAreGiven() {
     let res;
     var ItemCodeFor = $("#ItemCodeFor").val();
@@ -90,3 +97,8 @@ function AllFieldAreGiven() {
     }
     return res
 }
+
+
+
+
+
